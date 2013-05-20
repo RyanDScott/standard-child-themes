@@ -101,20 +101,26 @@ a:hover {
 .pager {
   background: #000000;
 }
-.pager a,
-.previous-page a,
-.next-page a {
+.pager li > a,
+.pager li > span {
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
+  background: #000000;
+  border: 1px solid #000000;
 }
-.pager a:hover,
-.previous-page a:hover,
-.next-page a:hover {
+.pager li > a:hover,
+.pager li > span:hover {
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
   background: #da363c;
+  border: 1px solid #da363c;
+  color: #ffffff;
+}
+.pager a:hover,
+.previous-page a:hover,
+.next-page a:hover {
   color: #ffffff;
 }
 /* Posts */

@@ -242,14 +242,26 @@ a {
 	background: @pagerBackgroundColor;
 }
 
-.pager a, .previous-page a, .next-page a {
-	.rounded-corners(0px);
+.pager li {
+	> a, > span {
+		.rounded-corners(0px);
+		background: @pagerBackgroundColor;
+		border: 1px solid @pagerBackgroundColor;
+		&:hover {
+			.rounded-corners(0px);
+			background: @pagerNextPrevBackgroundColor;
+			border: 1px solid @pagerNextPrevBackgroundColor;
+			color: @pagerNextPrevLinkColor;
+		}
+	}
 }
 
-.pager a:hover, .previous-page a:hover, .next-page a:hover {
-	.rounded-corners(0px);
-	background: @pagerNextPrevBackgroundColor;
-	color: @pagerNextPrevLinkColor;
+.pager, .previous-page, .next-page {
+	a {
+		&:hover {
+			color: @pagerNextPrevLinkColor;
+		}
+	}
 }
 
 /* Posts */
